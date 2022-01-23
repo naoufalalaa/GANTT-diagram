@@ -25,8 +25,10 @@ public class GanttChartSample extends Application {
         taches.add(t1);
         taches.add(t2);
         taches.add(t3);
-        String[] machines = new String[] { t1.getName(), t2.getName(), t3.getName() };
-
+        String[] machines = new String[taches.size()];
+        for (int k = 0;k < taches.size() ; k++){
+            machines[k] = taches.get(k).getName();
+        }
         final NumberAxis xAxis = new NumberAxis();
         final CategoryAxis yAxis = new CategoryAxis();
 
